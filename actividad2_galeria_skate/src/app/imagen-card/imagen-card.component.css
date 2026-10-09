@@ -1,0 +1,55 @@
+.tarjeta {
+  height: 100%;
+  background: white;
+  border: 1px solid #c9c9c9;
+  border-radius: 7px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 2px 3px 7px rgba(0, 0, 0, 0.12);
+  transition: transform 0.2s;
+}
+
+.tarjeta:hover {
+  transform: translateY(-3px);
+}
+
+.tarjeta:focus {
+  outline: 3px solid #e77817;
+}
+
+img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  display: block;
+}
+
+.info {
+  padding: 14px;
+}
+
+h2 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.ciudad {
+  margin: 5px 0 10px;
+  color: #a64d00;
+  font-weight: bold;
+}
+
+.info p:not(.ciudad) {
+  min-height: 42px;
+  margin: 0 0 12px;
+  line-height: 1.35;
+}
+
+span {
+  display: inline-block;
+  padding: 5px 9px;
+  color: white;
+  background: #333;
+  border-radius: 4px;
+  font-size: 0.85rem;
+}

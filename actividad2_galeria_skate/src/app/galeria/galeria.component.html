@@ -1,0 +1,42 @@
+<section class="galeria">
+  <div class="presentacion">
+    <h2>Galería</h2>
+    <p>Pulsa una fotografía para verla ampliada.</p>
+  </div>
+
+  <div class="filtros">
+    <button
+      *ngFor="let filtro of ['Todas', 'Madrid', 'Barcelona', 'Otras']"
+      type="button"
+      [class.activo]="filtroActual === filtro"
+      (click)="cambiarFiltro(filtro)">
+      {{ filtro }}
+    </button>
+  </div>
+
+  <div class="rejilla">
+    <app-imagen-card
+      *ngFor="let imagen of imagenesFiltradas"
+      [imagen]="imagen"
+      (seleccionar)="abrirImagen($event)">
+    </app-imagen-card>
+  </div>
+</section>
+
+<!-- Esta capa solo aparece cuando existe una imagen seleccionada. -->
+<div class="modal" *ngIf="imagenSeleccionada as imagen" (click)="cerrarImagen()">
+  <div class="modal-contenido" (click)="$event.stopPropagation()">
+    <button class="cerrar" type="button" (click)="cerrarImagen()" aria-label="Cerrar imagen">×</button>
+
+    <img [src]="imagen.url" [alt]="imagen.titulo">
+
+    <div class="modal-texto">
+      <h2>{{ imagen.titulo }}</h2>
+      <p><strong>{{ imagen.ciudad }}</strong> · {{ imagen.descripcion }}</p>
+      <p class="credito">
+        Foto: {{ imagen.autor }} ·
+        <a [href]="imagen.fuente" target="_blank" rel="noopener noreferrer">ver fuente</a>
+      </p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,33 @@
+.cabecera {
+  padding: 28px 20px;
+  text-align: center;
+  color: white;
+  background: #202020;
+  border-bottom: 5px solid #e77817;
+}
+
+.cabecera h1 {
+  margin: 0 0 8px;
+  font-size: 2.3rem;
+}
+
+.cabecera p {
+  margin: 0;
+}
+
+main {
+  min-height: 70vh;
+}
+
+.pie {
+  margin-top: 30px;
+  padding: 18px;
+  text-align: center;
+  background: #202020;
+  color: #ddd;
+  font-size: 0.9rem;
+}
+
+.pie p {
+  margin: 4px;
+}

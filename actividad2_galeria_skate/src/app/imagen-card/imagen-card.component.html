@@ -1,0 +1,10 @@
+<article class="tarjeta" (click)="abrirImagen()" tabindex="0" (keydown.enter)="abrirImagen()">
+  <img [src]="imagen.url" [alt]="imagen.titulo">
+
+  <div class="info">
+    <h2>{{ imagen.titulo }}</h2>
+    <p class="ciudad">{{ imagen.ciudad }}</p>
+    <p>{{ imagen.descripcion }}</p>
+    <span>Ver imagen</span>
+  </div>
+</article>
